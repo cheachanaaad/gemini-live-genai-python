@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#f7f3eb"/>
+  <text x="80" y="80" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="700" fill="#2b211b">FreshCheck Architecture</text>
+  <text x="80" y="118" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#7a5c47">Real-time multimodal grocery assistant on Google Cloud</text>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4a6f5a"/>
+    </marker>
+    <style>
+      .box { fill:#fffdf9; stroke:#d7c8b7; stroke-width:2; rx:24; ry:24; }
+      .cloud { fill:#eef5ef; stroke:#7ba287; stroke-width:2; rx:28; ry:28; }
+      .title { font-family:Arial, Helvetica, sans-serif; font-size:24px; font-weight:700; fill:#2b211b; }
+      .body { font-family:Arial, Helvetica, sans-serif; font-size:18px; fill:#56453a; }
+      .label { font-family:Arial, Helvetica, sans-serif; font-size:18px; font-weight:700; fill:#4a6f5a; }
+      .arrow { stroke:#4a6f5a; stroke-width:4; fill:none; marker-end:url(#arrow); }
+    </style>
+  </defs>
+
+  <rect x="80" y="180" width="260" height="150" class="box"/>
+  <text x="110" y="230" class="title">User</text>
+  <text x="110" y="270" class="body">Web / mobile browser</text>
+  <text x="110" y="302" class="body">Camera, microphone, text</text>
+
+  <rect x="420" y="180" width="320" height="180" class="box"/>
+  <text x="450" y="230" class="title">FreshCheck Frontend</text>
+  <text x="450" y="270" class="body">Vanilla JS UI</text>
+  <text x="450" y="302" class="body">Inventory tab / Recipe tab</text>
+  <text x="450" y="334" class="body">Live chat + media capture</text>
+
+  <rect x="820" y="140" width="680" height="620" class="cloud"/>
+  <text x="850" y="195" class="label">Google Cloud</text>
+
+  <rect x="870" y="230" width="280" height="170" class="box"/>
+  <text x="900" y="280" class="title">FastAPI Backend</text>
+  <text x="900" y="320" class="body">Cloud Run</text>
+  <text x="900" y="352" class="body">WebSocket session manager</text>
+
+  <rect x="1190" y="230" width="260" height="220" class="box"/>
+  <text x="1220" y="280" class="title">Tool Orchestrator</text>
+  <text x="1220" y="320" class="body">register_item(s)</text>
+  <text x="1220" y="352" class="body">delete_item(s)</text>
+  <text x="1220" y="384" class="body">find / expiry check</text>
+  <text x="1220" y="416" class="body">recipe tools</text>
+
+  <rect x="890" y="500" width="220" height="130" class="box"/>
+  <text x="920" y="548" class="title">Inventory State</text>
+  <text x="920" y="586" class="body">JSON + GCS-backed</text>
+
+  <rect x="1140" y="500" width="220" height="130" class="box"/>
+  <text x="1170" y="548" class="title">Workspace State</text>
+  <text x="1170" y="586" class="body">Recipes / UI state</text>
+
+  <rect x="1380" y="500" width="90" height="130" class="box"/>
+  <text x="1406" y="548" class="title" font-size="18">GCS</text>
+
+  <rect x="870" y="670" width="220" height="70" class="box"/>
+  <text x="900" y="715" class="body">Gemini Live API</text>
+
+  <rect x="1120" y="670" width="170" height="70" class="box"/>
+  <text x="1145" y="715" class="body">Gemini Flash Lite</text>
+
+  <rect x="1320" y="670" width="150" height="70" class="box"/>
+  <text x="1345" y="715" class="body">Vision / Segmentation</text>
+
+  <line x1="340" y1="255" x2="420" y2="255" class="arrow"/>
+  <text x="350" y="242" class="body">uses</text>
+
+  <line x1="740" y1="270" x2="870" y2="270" class="arrow"/>
+  <text x="745" y="242" class="body">WebSocket: audio / image / text</text>
+
+  <line x1="1150" y1="315" x2="1190" y2="315" class="arrow"/>
+  <line x1="1190" y1="355" x2="1150" y2="355" class="arrow"/>
+
+  <line x1="1010" y1="400" x2="1010" y2="500" class="arrow"/>
+  <line x1="1260" y1="450" x2="1250" y2="500" class="arrow"/>
+  <line x1="1360" y1="565" x2="1380" y2="565" class="arrow"/>
+
+  <line x1="1240" y1="450" x2="980" y2="670" class="arrow"/>
+  <line x1="1275" y1="450" x2="1205" y2="670" class="arrow"/>
+  <line x1="1310" y1="450" x2="1395" y2="670" class="arrow"/>
+
+  <line x1="980" y1="670" x2="980" y2="400" class="arrow"/>
+  <line x1="1205" y1="670" x2="1205" y2="450" class="arrow"/>
+  <line x1="1395" y1="670" x2="1395" y2="450" class="arrow"/>
+
+  <line x1="870" y1="360" x2="740" y2="360" class="arrow"/>
+  <text x="570" y="390" class="body">tool results, recipe data, live responses</text>
+
+  <text x="80" y="820" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#7a5c47">
+    Users stream voice, text, and camera input from the browser. Cloud Run manages the live session,
+  </text>
+  <text x="80" y="850" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#7a5c47">
+    executes inventory tools, stores state, and calls Gemini models for live interaction, recipe generation, and image understanding.
+  </text>
+</svg>
